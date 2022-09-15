@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+body, input[type="text"]{
+    font-size: 2rem;
+}
+
+.container{
+    margin: .5rem;
+}
+
+input[type="text"]{
+    background-color: transparent;
+    color:#fff;
+}
+
+button:hover{
+    cursor:pointer;
+}
+
+.calculadora{
+    margin: auto;
+    width: 30%;
+    border: 1px solid #c2c2c2;
+    padding: 10px 3px 3px 3px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.calculadora-input{
+    margin: 5px 8px 5px 0;
+}
+.operator:focus, .operacion:focus{
+    outline: none;
+}
+
+.operator, .operacion{
+    border:none;
+    width: 100%;
+    text-align: right;
+}
+
+.operacion{
+    font-size: 1.3rem!important;
+    display: none;
+}
+
+.calculadora-botones{
+    display: flex;
+    justify-content: space-around;
+}
+
+.calculadora-botones__operador, .calculadora-botones__numero{
+    width: 100%;
+    padding: 20px;
+    margin:1px;
+    border:none;
+    font-size: 1rem;
+    color:#fff;
+}
+
+.calculadora-botones__operador{
+    background-color: rgba(0, 0, 0, 0.450);
+}
+.calculadora-botones__numero{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (min-width:350px) and (max-width:780px){
+    .calculadora{
+        width: 100%;
+    }
+}
+
+@media (min-width:780px) and (max-width:1200px){
+    .calculadora{
+        width: 50%;
+    }
+}
+
+
+

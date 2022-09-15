@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calucladora</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/calculator1.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="calculadora">
+            <div class="calculadora-input">
+                <input class="operacion" id="operacion" type="text" value="0" readonly />
+                <input class="operator" id="operator" type="text" value="0" readonly />
+            </div>
+            <div class="calculadora-botones">
+                <button type="button" id="porcentaje" class="calculadora-botones__operador">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-percent" viewBox="0 0 16 16">
+                        <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0zM4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                      </svg>
+                </button>
+                <button type="button" id="raizCuadrada" class="calculadora-botones__operador">√</button>
+                <button type="button" id="cuadrado" class="calculadora-botones__operador">x²</button>
+                <button type="button" id="unoX" class="calculadora-botones__operador">1/x</button>
+            </div>
+            <div class="calculadora-botones">
+                <button type="button" id="CE" class="calculadora-botones__operador">CE</button>
+                <button type="button" id="C" class="calculadora-botones__operador">C</button>
+                <button type="button" id="borrar" class="calculadora-botones__operador">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-backspace" viewBox="0 0 16 16">
+                        <path d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z"/>
+                        <path d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z"/>
+                    </svg>
+                </button>
+                <button type="button" id="dividir" value="/"  class="calculadora-botones__operador">/</button>
+            </div>
+            <div class="calculadora-botones">
+                <button type="button" id="7" value="7" class="calculadora-botones__numero">7</button>
+                <button type="button" id="8" value="8" class="calculadora-botones__numero">8</button>
+                <button type="button" id="9" value="9" class="calculadora-botones__numero">9</button>
+                <button type="button" id="multiplicar" value="*"  class="calculadora-botones__operador">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="calculadora-botones">
+                <button type="button" id="4" value="4" class="calculadora-botones__numero">4</button>
+                <button type="button" id="5" value="5" class="calculadora-botones__numero">5</button>
+                <button type="button" id="6" value="6" class="calculadora-botones__numero">6</button>
+                <button type="button" id="restar" value="-" class="calculadora-botones__operador">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                        <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="calculadora-botones">
+                <button type="button" id="1" value="1" class="calculadora-botones__numero">1</button>
+                <button type="button" id="2" value="2" class="calculadora-botones__numero">2</button>
+                <button type="button" id="3" value="3" class="calculadora-botones__numero">3</button>
+                <button type="button" id="sumar" value="+" class="calculadora-botones__operador">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="calculadora-botones">
+                <button type="button" id="masMenos" class="calculadora-botones__operador">±</button>
+                <button type="button" id="0" value="0" class="calculadora-botones__numero">0</button>
+                <button type="button" id="coma" value="," class="calculadora-botones__operador">,</button>
+                <button type="button" id="igual" class="calculadora-botones__operador">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
